@@ -1,0 +1,67 @@
+@import "./../components/nav";
+
+.nav-mobile {
+    a {
+        font-size: 20px;
+        color: rgba($color: #000000, $alpha: .8);
+        padding: .5rem;
+    }
+}
+
+.head-search {
+    width: 100%;
+    background: $primary;
+    padding: 0.75rem;
+    color: #fff;
+
+    .search {
+        position: relative;
+        width: 100%;
+        margin-right: 10px;
+
+        ::placeholder {
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            padding: 6px 2rem 6px 6px;
+
+
+        }
+
+        .btn {
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .btn {
+        background: transparent;
+        border: 0;
+        color: #fff;
+    }
+}
+
+.head-search-modal {
+    transition: $transation;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, -60px);
+    visibility: hidden;
+    opacity: 0;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

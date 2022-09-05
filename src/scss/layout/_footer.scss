@@ -1,0 +1,36 @@
+.footer {
+    padding-top: 4rem;
+
+    a {
+        color: rgba($color: #000000, $alpha: .55);
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        margin: .5rem 0;
+
+        &.parent {
+            color: #222;
+            margin-bottom: 1rem;
+        }
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.copy {
+    padding: 3rem 0;
+    color: #bbb;
+    font-size: .8rem;
+}
+
+.link-social a {
+    margin-right: 1rem;
+    color: #222;
+    font-size: 1.5rem;
+
+    &:hover {
+        color: $primary;
+    }
+}

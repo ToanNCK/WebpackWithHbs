@@ -1,0 +1,234 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 2;
+  /*Define a height for NavBar*/
+  transition: 0.5s;
+}
+
+.mail-search {
+  a {
+    color: rgba($color: #000000, $alpha: 0.8);
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.navbar {
+  padding: 0;
+  position: relative;
+  background: #fff !important;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 96%;
+  position: relative;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0 1rem;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 1.25rem;
+  }
+
+  &>span {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0;
+
+    @include media-breakpoint-up(xl) {
+      padding: 1.25rem 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      transition: $transation;
+    }
+  }
+
+  &:hover>span {
+    color: $primary;
+
+    &::before {
+      width: 100%;
+      background-color: $primary;
+    }
+  }
+}
+
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .nav-link.active>span {
+  color: $primary;
+
+  &::before {
+    width: 100%;
+    background-color: $primary;
+  }
+}
+
+
+
+#navbar .nav-item:hover>a {
+  color: $primary;
+
+  span {
+    &::before {
+      width: 100%;
+      background-color: $primary;
+    }
+  }
+}
+
+#navbar .dropdown-toggle::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#navbar .dropdown {
+  position: inherit;
+}
+
+#navbar .navbar-nav .dropdown-menu {
+  width: 100%;
+  left: 0;
+  transform: translateY(1rem);
+  transition: $transation;
+  border: 0;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    height: 0;
+    display: block;
+  }
+}
+
+#navbar .dropdown .dropdown-menu.show {
+  transition: $transation;
+  transition-delay: 0.3s;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  margin-top: 0; // remove the gap so it doesn't close
+  transform: translateY(0);
+}
+
+// drop 1
+.drop-one {
+  max-width: 1320px;
+
+  li {
+    flex: 25%;
+  }
+}
+
+.ap-item {
+  color: rgba($color: #000000, $alpha: 0.8);
+  padding: 1rem;
+  padding-top: 0;
+  display: block;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0;
+  }
+}
+
+// drop 2
+.sub-nav {
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+  padding: 2rem 0;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+// drop 3
+.sup-item {
+  padding: 0 1.5rem;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 3rem;
+  }
+
+  position: relative;
+  border-left: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+  &:first-child {
+    border-left: 0;
+  }
+}
+
+// humber ber
+.navbar-toggler {
+  border: 0;
+  outline: 0;
+
+  &:focus {
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.navbar-collapse {
+  height: 100vh;
+  overflow: auto;
+
+  @include media-breakpoint-up(xl) {
+    height: auto;
+  }
+}
+
+@keyframes fadeInUpBanner {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.swiper-slide-active {
+  .fadeInUpBanner {
+    animation-name: fadeInUpBanner;
+    -webkit-animation-name: fadeInUpBanner;
+  }
+
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .transition-delay50 {
+    transition-delay: 0.5s;
+  }
+
+  .transition-delay100 {
+    transition-delay: 1s;
+  }
+
+  .transition-delay150 {
+    transition-delay: 1.5s;
+  }
+}

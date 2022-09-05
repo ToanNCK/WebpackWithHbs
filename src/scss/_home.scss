@@ -1,0 +1,245 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.slide-home.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-home .swiper-slide {
+  text-align: center;
+  background: #f9fafc;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.slide-home .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.bottom-left-1rem {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.text-banner {
+  top: 10%;
+
+  a {
+    color: rgba($color: #000000, $alpha: 0.8);
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.prodata {
+  &.w1160 {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    .pec-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      .pec-linner {
+        min-width: 195px;
+      }
+
+      .pec-title {
+        padding-bottom: 0.38235em;
+        margin-bottom: 0.35294em;
+        border-bottom: 1px solid #000;
+        sub {
+          margin-left: 0.2381em;
+          font-size: 0.61765em;
+        }
+      }
+
+      .pec-txt {
+        line-height: 1.66667;
+        letter-spacing: 0.6px;
+      }
+
+      .pec-center {
+        position: relative;
+        width: 590px;
+        height: 590px;
+        margin: auto;
+        .keyframe-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .keyframe-slider {
+          position: absolute;
+          &.left {
+            top: 33.898305%;
+            left: -3.38983%;
+            width: 33.898305%;
+            padding: 11px;
+          }
+
+          &.right {
+            top: 16.949152%;
+            right: 8.474576%;
+            width: 27.118644%;
+            padding: 8px;
+          }
+
+          svg {
+            display: block;
+            width: 100%;
+          }
+
+          .keyframe-slider-btn {
+            width: 16px;
+            height: 16px;
+            border-radius: 9999px;
+            background-color: #003686;
+            position: absolute;
+            left: -8px;
+            top: -8px;
+            border-width: 0;
+            padding: 0;
+            cursor: grab;
+          }
+        }
+
+        .drag {
+          &-right {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0.5px;
+          }
+
+          &-left {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            position: absolute;
+            top: -1px;
+            right: 54px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pec-minner,
+.psc-minner {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .pec-linner,
+  .pec-minner,
+  .psc-linner,
+  .psc-minner {
+    width: 50%;
+  }
+
+  .psc-linner,
+  .pec-linner {
+    min-width: inherit;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .psc-minner,
+  .pec-minner {
+    display: block;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .psc-rinner,
+  .pec-rinner {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .prodata.w1160 .pec-box .pec-center {
+    width: 100%;
+    height: 366px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .prodata.w1160 .pec-box .pec-center .keyframe-slider.left {
+    width: 160.3px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 35px;
+      width: 30px;
+      background: white;
+      bottom: 0;
+      right: 93px;
+    }
+  }
+
+  .prodata.w1160 .pec-box .pec-center .keyframe-slider.right {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 20px;
+      background: white;
+      bottom: 10px;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .psc-linner,
+  .pec-linner {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .psc-minner,
+  .pec-minner {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
